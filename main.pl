@@ -19,6 +19,7 @@ concern(measles) :- measles, !.
 concern(malaria) :- malaria, !.
 concern(pneumonia)  :- pneumonia, !.
 concern(hernia)  :- hernia, !.
+concern(diabetes)  :- diabetes, !.
 concern(unknown_disease).         /* which means there is no diagnosis for the following symptoms*/
 
 
@@ -165,6 +166,25 @@ hernia:-
     write('See a doctor immediately  :'),
     nl,
     write(''),
+    nl,
+nl.
+
+diabetes:-
+    askfor(painchest),
+    askfor(nausea),
+    askfor(vomiting),
+    askfor(nausea),
+    askfor(laboredbreathing),
+    askfor(vertigo),
+    askfor(shortnessofbreath),
+   
+    write('Advices and Sugestions:'),
+    nl,
+    write('Take insulin shots with prescription'),
+    nl,
+    write('Anti-Diabetic medications :'),
+    nl,
+    write('Cut down on sugar and packed items'),
     nl,
 nl.
 
