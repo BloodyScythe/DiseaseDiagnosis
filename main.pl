@@ -20,6 +20,7 @@ concern(malaria) :- malaria, !.
 concern(pneumonia)  :- pneumonia, !.
 concern(hernia)  :- hernia, !.
 concern(diabetes)  :- diabetes, !.
+concern(asthma)  :- asthma, !.
 concern(unknown_disease).         /* which means there is no diagnosis for the following symptoms*/
 
 
@@ -185,6 +186,25 @@ diabetes:-
     write('Anti-Diabetic medications :'),
     nl,
     write('Cut down on sugar and packed items'),
+    nl,
+nl.
+
+asthma:-
+    askfor(wheezing),
+    askfor(cough),
+    askfor(shortnessofbreath),
+    askfor(distressrespiratory),
+    askfor(laboredbreathing),
+    askfor(chesttightness),
+    %askfor(shortnessofbreath),
+   
+    write('Advices and Sugestions:'),
+    nl,
+    write('Take prescription steroid'),
+    nl,
+    write('Anti-infammatory medications :'),
+    nl,
+    write('quit smoking tobacoo'),
     nl,
 nl.
 
