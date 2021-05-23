@@ -18,6 +18,7 @@ concern(typhoid) :- typhoid, !.
 concern(measles) :- measles, !.
 concern(malaria) :- malaria, !.
 concern(pneumonia)  :- pneumonia, !.
+concern(hernia)  :- hernia, !.
 concern(unknown_disease).         /* which means there is no diagnosis for the following symptoms*/
 
 
@@ -145,6 +146,25 @@ pneumonia:-
     write('2. Take Antibiotic :'),
     nl,
     write('3. IV fluids and oral Rehydration :'),
+    nl,
+nl.
+
+hernia:-
+    askfor(painabdominal),
+    askfor(fever),
+    askfor(hyperventilation),
+    askfor(nausea),
+    askfor(soretotouch),
+    askfor(excruciatingpain),
+    askfor(foodintolerance),
+   
+    write('Advices and Sugestions:'),
+    nl,
+    write('Do not lift heavy obejects '),
+    nl,
+    write('See a doctor immediately  :'),
+    nl,
+    write(''),
     nl,
 nl.
 

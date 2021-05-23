@@ -1,0 +1,17 @@
+ hypothesis(hernia)  :-
+    has(painabdominal),
+    has(pain),
+    has(hyperventilation),
+    has(excruciatingpain),
+    has(gag),
+    has(nausea),
+    has(posturing),
+    has(hemiplegia),
+    has(soretotouch),
+    has(haemorrhage),
+    has(apyrexial),
+    has(foodintolerance),
+    has(pulseabsent),
+    has(asthenia),
+    has(massofbodystructure),
+    has(thicken).
