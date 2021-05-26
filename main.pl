@@ -12,7 +12,7 @@ undo.
 /* for checking disease we are having some of the hypothesis which needs to return
  true in order to verify the disease and return the start procedure as true */
 concern(cold) :- cold, !.
-concern(corona) :- COVID-19, !.
+concern(corona) :- corona, !.
 concern(flu) :- flu, !.
 concern(typhoid) :- typhoid, !.
 concern(measles) :- measles, !.
@@ -21,6 +21,10 @@ concern(pneumonia)  :- pneumonia, !.
 concern(hernia)  :- hernia, !.
 concern(diabetes)  :- diabetes, !.
 concern(asthma)  :- asthma, !.
+concern(mumps)  :- mumps, !.
+concern(chicken_pox)  :- chicken_pox, !.
+concern(pancreatitis)  :- pancreatitis, !.
+concern(lymphoma)  :- lymphoma, !.
 concern(unknown_disease).         /* which means there is no diagnosis for the following symptoms*/
 
 
@@ -42,7 +46,66 @@ cold :-        /* now it will verify the given symptoms for returning cold to be
     write('Please wear warm cloths Because'),
 nl.
 
-COVID-19 :-
+lymphoma:-
+    askfor(lesion),
+    askfor(fever),
+    askfor(decreasedbodyweight),
+    askfor(fatigue),
+    askfor(tired),
+    askfor(polydypsia),
+    askfor(difficultypassingurine),
+    write('Advices and Sugestions:'),
+    nl,
+    write('See a radiologist for chemo and look for bonemarrow transplant'),
+nl.
+
+mumps:- 
+	askfor(fever),
+	askfor(swollen_glands),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: nonsteroidal anti-inflammatory drug'),
+    nl,
+    write('2: Motrin IB'),
+    nl,
+    write('3: acetaminophen'),
+    nl,
+    write('Take Bed rest'),
+nl.
+
+pancreatitis:-
+    askfor(vomiting),
+    askfor(painabdominal),
+    askfor(nausea),
+    askfor(pain),
+    askfor(diarrhea),
+    askfor(stoolcoloryellow),
+    askfor(apyrexial),
+    askfor(soretotouch),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Take IV fluids and Fluid replacemnt'),
+    nl,
+    write('2:Consider surgery '),
+    nl,
+   % write('3: acetaminophen'),
+    nl,
+    write('Take low fat diet'),
+nl.
+
+chicken_pox:- 
+	askfor(fever),
+	askfor(chills),
+	askfor(body_ache),
+	askfor(rash),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: antihistamines drug'),
+    nl,
+    write('Hydrate and protect skin from damange'),
+nl.
+
+corona :-
     askfor(headache),
     askfor(fever),
     askfor(runny_nose),
@@ -55,7 +118,7 @@ COVID-19 :-
     nl,
     write('3: Isolate Yourself'),
     nl,
-    write('Please wear a mask and isolate yourself and contact to the nearby COVID hospital beacuse'),
+    write('Please wear a mask and isolate yourself and contact to the nearby corona hospital beacuse'),
 nl.
 
 flu :-
@@ -222,7 +285,7 @@ assert(no(Question)), fail).     /* it will not save in its memory if the answer
 
 :- dynamic yes/1,no/1.           /* it will start keep asking questions from user dynamically and user has to give answer in yes(y) or no(n) format according to the question */  
 /*How to askfor something */
-askfor(S) :- (yes(S) -> true ; 
+askfor(S) :- (yes(S) -> true ;      
 (no(S) -> fail ; ask(S))).      /* if the answer is yes and it is true an will ask for another set of question and if the answer is no it will fail and move to other hypothesis */ 
                                     /* and here the s is replaced by the symptoms as it is a parameter */
                                     /* undo all yes/no assertions*/    
@@ -230,5 +293,3 @@ askfor(S) :- (yes(S) -> true ;
 undo :- retract(yes(_)),fail. 
 undo :- retract(no(_)),fail.
 undo.
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
