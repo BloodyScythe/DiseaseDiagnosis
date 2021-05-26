@@ -21,6 +21,10 @@ concern(pneumonia)  :- pneumonia, !.
 concern(hernia)  :- hernia, !.
 concern(diabetes)  :- diabetes, !.
 concern(asthma)  :- asthma, !.
+concern(mumps)  :- mumps, !.
+concern(chicken_pox)  :- chicken_pox, !.
+concern(pancreatitis)  :- pancreatitis, !.
+concern(lymphoma)  :- lymphoma, !.
 concern(unknown_disease).         /* which means there is no diagnosis for the following symptoms*/
 
 
@@ -40,6 +44,65 @@ cold :-        /* now it will verify the given symptoms for returning cold to be
     write('3: Nasal spray'),
     nl,
     write('Please wear warm cloths Because'),
+nl.
+
+lymphoma:-
+    askfor(lesion),
+    askfor(fever),
+    askfor(decreasedbodyweight),
+    askfor(fatigue),
+    askfor(tired),
+    askfor(polydypsia),
+    askfor(difficultypassingurine),
+    write('Advices and Sugestions:'),
+    nl,
+    write('See a radiologist for chemo and look for bonemarrow transplant'),
+nl.
+
+mumps:- 
+	askfor(fever),
+	askfor(swollen_glands),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: nonsteroidal anti-inflammatory drug'),
+    nl,
+    write('2: Motrin IB'),
+    nl,
+    write('3: acetaminophen'),
+    nl,
+    write('Take Bed rest'),
+nl.
+
+pancreatitis:-
+    askfor(vomiting),
+    askfor(painabdominal),
+    askfor(nausea),
+    askfor(pain),
+    askfor(diarrhea),
+    askfor(stoolcoloryellow),
+    askfor(apyrexial),
+    askfor(soretotouch),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Take IV fluids and Fluid replacemnt'),
+    nl,
+    write('2:Consider surgery '),
+    nl,
+   % write('3: acetaminophen'),
+    nl,
+    write('Take low fat diet'),
+nl.
+
+chicken_pox:- 
+	askfor(fever),
+	askfor(chills),
+	askfor(body_ache),
+	askfor(rash),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: antihistamines drug'),
+    nl,
+    write('Hydrate and protect skin from damange'),
 nl.
 
 corona :-
