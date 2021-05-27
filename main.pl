@@ -25,6 +25,8 @@ concern(mumps)  :- mumps, !.
 concern(chicken_pox)  :- chicken_pox, !.
 concern(pancreatitis)  :- pancreatitis, !.
 concern(lymphoma)  :- lymphoma, !.
+concern(hiv)  :- hiv, !.
+concern(anemia)  :- anemia, !.
 concern(unknown_disease).         /* which means there is no diagnosis for the following symptoms*/
 
 
@@ -45,6 +47,24 @@ cold :-        /* now it will verify the given symptoms for returning cold to be
     nl,
     write('Please wear warm cloths Because'),
 nl.
+
+hiv :-
+    askfor(fever),
+    askfor(nightsweat),
+    askfor(cough),
+    askfor(decreasedbodyweight),
+    askfor(chill),
+    askfor(diarrhea),
+    askfor(musclehypotonia),
+    askfor(hypotonic),
+    askfor(feelingsuicidal),
+    write('Advices and Sugestions:'),
+    nl,
+    write('Take HIV antiviral'),
+    nl,
+    write('Please see a doctor to confirm'),
+nl.
+
 
 lymphoma:-
     askfor(lesion),
@@ -103,6 +123,27 @@ chicken_pox:-
     write('1: antihistamines drug'),
     nl,
     write('Hydrate and protect skin from damange'),
+nl.
+
+anemia :-
+    askfor(chill),
+    askfor(monoclonal),
+    askfor(haemorrhage),
+    askfor(asthenia),
+    askfor(fatigue),
+    askfor(hemepositive),
+    askfor(painback),
+    askfor(hyponatremia),
+    askfor(dizziness),
+    askfor(shortnessofbreath),
+    askfor(pain),
+    askfor(rhonchus),
+    askfor(swelling),
+    write('Advices and Sugestions:'),
+    nl,
+    write('Take Dietry supplement '),
+    nl,
+    write('Please see a doctor to confirm'),
 nl.
 
 corona :-
