@@ -328,9 +328,9 @@ assert(no(Question)), fail).     /* it will not save in its memory if the answer
 /*How to askfor something */
 askfor(S) :- (yes(S) -> true ;      
 (no(S) -> fail ; ask(S))).      /* if the answer is yes and it is true an will ask for another set of question and if the answer is no it will fail and move to other hypothesis */ 
-                                    /* and here the s is replaced by the symptoms as it is a parameter */
-                                    /* undo all yes/no assertions*/    
-                                     /* the undo function is here to undo or clear(refresh) all the working memory and one set of question or hypothesis is verified */
+                                /* and here the s is replaced by the symptoms as it is a parameter */
+                                /* undo all yes/no assertions*/    
+                                 /* the undo function is here to undo or clear(refresh) all the working memory and one set of question or hypothesis is verified */
 undo :- retract(yes(_)),fail. 
 undo :- retract(no(_)),fail.
 undo.
