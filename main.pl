@@ -53,7 +53,7 @@ hiv :-
     askfor(nightsweat),
     askfor(cough),
     askfor(decreasedbodyweight),
-    askfor(chill),
+    askfor(chills),
     askfor(diarrhea),
     askfor(musclehypotonia),
     askfor(hypotonic),
