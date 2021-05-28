@@ -1,4 +1,4 @@
- /* here start is the procedure which   will return true only if its given condition return true */ 
+
 
 start:- concern(Disease),    /* here start is the procedure which   will return true only if its given condition return true */ 
                                   /* here we need to check or verify for the disease which are given below whether it is true or not */
@@ -53,11 +53,8 @@ hiv :-
     askfor(nightsweat),
     askfor(cough),
     askfor(decreasedbodyweight),
-<<<<<<< HEAD
     askfor(chills),
-=======
     askfor(chill),
->>>>>>> 8ee400872523794605692d22ed652d9d03c56723
     askfor(diarrhea),
     askfor(musclehypotonia),
     askfor(hypotonic),
