@@ -1,6 +1,6 @@
+ /* here start is the procedure which   will return true only if its given condition return true */ 
 
-
-start:- concern(Disease),    /* here start is the procedure which will return true only if its given condition return true */ 
+start:- concern(Disease),    /* here start is the procedure which   will return true only if its given condition return true */ 
                                   /* here we need to check or verify for the disease which are given below whether it is true or not */
 write('Hello , I believe that the patient have : '),
 write(Disease),
