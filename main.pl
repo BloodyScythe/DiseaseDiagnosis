@@ -1,16 +1,12 @@
-
-
 start:- concern(Disease),    /* here start is the procedure which   will return true only if its given condition return true */ 
                                   /* here we need to check or verify for the disease which are given below whether it is true or not */
 write('Hello , I believe that the patient have : '),
 write(Disease),
-nl,              /* here nl is used for the new line */
-write('TAKE CARE '),
+nl,              
+write('Book an appointment with a licensed medical practitioner to confirm the diagnosis'),
+write('with confirmative tests'),
 undo.
-
-/* These are the disease that should be tested with the symptoms*/
-/* for checking disease we are having some of the hypothesis which needs to return
- true in order to verify the disease and return the start procedure as true */
+/* These are the diseases in DB*/
 concern(cold) :- cold, !.
 concern(corona) :- corona, !.
 concern(flu) :- flu, !.
@@ -31,8 +27,9 @@ concern(unknown_disease).         /* which means there is no diagnosis for the f
 
 
 /*Here the rules are given for disease identification*/
-                                                   /* here we are defining some of the rules which is used to verify the hypothesis which we gave above */
-cold :-        /* now it will verify the given symptoms for returning cold to be true and if anyone of the symptoms is false then it will proceed with next hypothesis */
+/* here we are defining some of the rules which is used to verify the hypothesis which we gave above */
+ /* now it will verify the given symptoms for returning cold to be true and if anyone of the symptoms is false then it will proceed with next hypothesis */
+cold :-       
     askfor(headache),
     askfor(runny_nose),
     askfor(sneezing),
@@ -329,9 +326,9 @@ assert(no(Question)), fail).     /* it will not save in its memory if the answer
 /*How to askfor something */
 askfor(S) :- (yes(S) -> true ;      
 (no(S) -> fail ; ask(S))).      /* if the answer is yes and it is true an will ask for another set of question and if the answer is no it will fail and move to other hypothesis */ 
-                                /* and here the s is replaced by the symptoms as it is a parameter */
-                                /* undo all yes/no assertions*/    
-                                 /* the undo function is here to undo or clear(refresh) all the working memory and one set of question or hypothesis is verified */
-undo :- retract(yes(_)),fail. 
-undo :- retract(no(_)),fail.
-undo.
+undo :- retract(yes(_)),fail.   /* and here the s is replaced by the symptoms as it is a parameter */
+undo :- retract(no(_)),fail.    /* undo all yes/no assertions*/   
+undo.                            /* the undo function is here to undo or clear(refresh) all the working memory and one set of question or hypothesis is verified */
+
+                                
+                                
