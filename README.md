@@ -3,7 +3,6 @@
 PROLOG program to disagose a disease based on symptoms
 
 
-run ./Script.sh to execute program
 =======
 <h1> DiseaseDiagnosis </h1>  :skull:  :ambulance:
 PROLOG program to disagose a disease based on symptoms
