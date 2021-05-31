@@ -9,11 +9,16 @@ run ./Script.sh to execute program
 PROLOG program to disagose a disease based on symptoms
 
 
-Run ```./Script.sh``` to execute program.
+Run ```./run.sh``` to execute program.
 If running on a **non-Linux** 
 execute ```Swipl main.pl```
 
 **Try the porgram:** [Online](https://swish.swi-prolog.org/p/Dhruv_diagnosis.pl)
 
-Documentation & working is included in the porgram
->>>>>>> 8ee400872523794605692d22ed652d9d03c56723
+
+Features:-
+- [x] Asks for possible symptoms and try to diagnose based on reply
+- [x] tested [Online](https://swish.swi-prolog.org/p/Dhruv_diagnosis.pl)
+- [x] Contains **Documentation**
+- [ ] Provide confirmatory test
+- [ ] Takes into account region specific diseases
