@@ -19,5 +19,5 @@ Features:-
 - [x] Asks for possible symptoms and try to diagnose based on reply
 - [x] tested [Online](https://swish.swi-prolog.org/p/Dhruv_diagnosis.pl)
 - [x] Contains **Documentation**
-- [ ] Provide confirmatory test
+- [ ] Suggests the confirmatory test to confrim the diagnosis 
 - [ ] Takes into account region specific diseases
