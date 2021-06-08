@@ -22,4 +22,19 @@ Features:-
 - [ ] Suggests the confirmatory test to confrim the diagnosis 
 - [ ] Takes into account region specific diseases
  <h1> Flowchart </h1>
- ![](images/bg.png)
+
+![flow](/images/bg.png)
+
+
+      
+          
+      
+
+  
+
+
+      
+          
+      
+
+  
