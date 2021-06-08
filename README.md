@@ -21,5 +21,5 @@ Features:-
 - [x] Contains **Documentation**
 - [ ] Suggests the confirmatory test to confrim the diagnosis 
 - [ ] Takes into account region specific diseases
- 
- ![Flowchart](images/flowchartbg.jpg)
+ <h1> Flowchart </h1>
+ ![Flowchart](images/flowchartbg.jpeg)
