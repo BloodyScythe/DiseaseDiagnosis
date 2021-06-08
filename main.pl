@@ -1,7 +1,7 @@
-start:- concern(Disease),    /* here start is the procedure which   will return true only if its given condition return true */ 
-                                  /* here we need to check or verify for the disease which are given below whether it is true or not */
-write('Hello , I believe that the patient have : '),
-write(Disease),
+start:- concern(Disease),    /* here start is the procedure which   will return true only       if  its given condition return true */ 
+                                 
+write('Hello , I believe that the patient have : '), /* here we need to check or verify for the    */         
+write(Disease),                   /*  disease which are given below whether it is true or not */
 nl,              
 write('Book an appointment with a licensed medical practitioner to confirm the diagnosis'),
 write('with confirmative tests'),
