@@ -12,6 +12,9 @@ Run ```./run.sh``` to execute program.
 If running on a **non-Linux** 
 execute ```Swipl main.pl```
 
+Type start. to run the program.
+answer with "yes." or "no." to the questions.
+
 **Try the porgram:** [Online](https://swish.swi-prolog.org/p/Dhruv_diagnosis.pl)
 
 
@@ -22,4 +25,27 @@ Features:-
 - [ ] Suggests the confirmatory test to confrim the diagnosis 
 - [ ] Takes into account region specific diseases
  <h1> Flowchart </h1>
- ![Flowchart](images/flowchartbg.jpg)
+
+![flow](/images/bg.png)
+
+ <h1> Screenshots </h1>
+ 
+ ![flow](/images/1.jpg)
+ 
+ ![flow](/images/2.jpg)
+ 
+ ![flow](/images/3.jpg)
+
+
+      
+          
+      
+
+  
+
+
+      
+          
+      
+
+  
