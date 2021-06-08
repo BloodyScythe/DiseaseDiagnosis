@@ -5,7 +5,7 @@ write(Disease),
 nl,              
 write('Book an appointment with a licensed medical practitioner to confirm the diagnosis'),
 write('with confirmative tests'),
-undo.
+undo.  
 /* These are the diseases in DB*/
 concern(cold) :- cold, !.
 concern(corona) :- corona, !.
