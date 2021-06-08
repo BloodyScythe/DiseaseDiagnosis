@@ -21,3 +21,5 @@ Features:-
 - [x] Contains **Documentation**
 - [ ] Suggests the confirmatory test to confrim the diagnosis 
 - [ ] Takes into account region specific diseases
+ 
+ ![Flowchart](A:/MSC/Minor Project Report/AI/expert system.png)
