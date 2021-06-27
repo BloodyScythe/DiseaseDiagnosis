@@ -1,0 +1,8 @@
+dynamic-
+
+https://www.cse.unsw.edu.au/~billw/dictionaries/prolog/dynamic.html
+
+assert-
+
+http://alumni.cs.ucr.edu/~vladimir/cs171/prolog_2.pdf
+

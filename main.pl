@@ -18,10 +18,10 @@ nl,
 ->
 assert(yes(Question)) ;          /* it will assert and save it in memory if the answer is yes */
 assert(no(Question)), fail).     /* it will not save in its memory if the answer is no and moved to the other question */
-
+%force backtracking
 :- dynamic yes/1,no/1.           /* it will start keep asking questions from user dynamically and user has to give answer in yes(y) or no(n) format according to the question */  
 /*How to askfor something */
-askfor(S) :- (yes(S) -> true ;      
+askfor(S) :- (yes(S) -> true ;     %retract to remove fact from database
 (no(S) -> fail ; ask(S))).      /* if the answer is yes and it is true an will ask for another set of question and if the answer is no it will fail and move to other hypothesis */ 
 undo :- retract(yes(_)),fail.   /* and here the s is replaced by the symptoms as it is a parameter */
 undo :- retract(no(_)),fail.    /* undo all yes/no assertions*/   

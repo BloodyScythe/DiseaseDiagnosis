@@ -1,5 +1,5 @@
 /* These are the diseases in DB*/
-concern(cold) :- cold, !.
+concern(cold) :- cold, !. %! to avoid backtracking
 concern(corona) :- corona, !.
 concern(flu) :- flu, !.
 concern(typhoid) :- typhoid, !.
